@@ -1,3 +1,6 @@
+#https://github.com/NicoSalad/lab11-NJS-NoPartner
+#Project solely done by Nicolas Salas I had no partner
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
@@ -22,10 +25,10 @@ def add(a, b):
 def subtract(a,b):
     return a - b
 
-def multiply(a,b):
+def mul(a,b):
     return a * b
 
-def divide(a,b):
+def div(a,b):
     if b == 0:
         raise ZeroDivisionError("can't divide by zero")
     return  b / a
@@ -33,8 +36,8 @@ def divide(a,b):
 def logarithm(a,b):
     if a <= 0 or a == 1 or b <= 0:
         raise ValueError("Invalid arguments for log")
-    return math.log(a, b)
+    return math.log(b, a)
 
-def exponent(a,b):
+def exp(a,b):
     return a ** b
 
