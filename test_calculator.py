@@ -1,3 +1,6 @@
+#https://github.com/NicoSalad/lab11-NJS-NoPartner
+#Project solely done by Nicolas Salas I had no partner
+
 import unittest
 from calculator import *
 
@@ -16,15 +19,14 @@ class TestCalculator(unittest.TestCase):
 
     ######## Partner 1
     def test_multiply(self): # 3 assertions
-        self.assertEqual(multiply(3,4), 12)
-        self.assertEqual(multiply(-2,5), -10)
-        self.assertEqual(multiply(0,10), 0)
+        self.assertEqual(mul(3,4), 12)
+        self.assertEqual(mul(-2,5), -10)
+        self.assertEqual(mul(0,10), 0)
 
     def test_divide(self): # 3 assertions
-        self.assertAlmostEqual(divide(10,2), 0.2)
-        self.assertAlmostEqual(divide(2,10), 5)
-        with self.assertRaises(ZeroDivisionError):
-            divide(0,5)
+        self.assertAlmostEqual(div(10,2), 0.2)
+        self.assertAlmostEqual(div(2,10), 5)
+        self.assertAlmostEqual(div(3,6), 2)
 
     # ##########################
 
@@ -32,7 +34,7 @@ class TestCalculator(unittest.TestCase):
     def test_divide_by_zero(self): # 1 assertion
         # call division function inside, example:
         with self.assertRaises(ZeroDivisionError):
-            divide(0, 5)
+            div(0, 5)
 
 
 
